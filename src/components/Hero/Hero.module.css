@@ -11,7 +11,6 @@
   background-repeat: no-repeat;
 }
 
-/* --- Main Content --- */
 .textContent {
   text-align: left;
   z-index: 5;
@@ -35,7 +34,6 @@
   color: #fff;
 }
 
-/* --- Profile Image --- */
 .profileImage {
   position: absolute;
   width: 300px;
@@ -48,7 +46,6 @@
   z-index: 1;
 }
 
-/* --- Decorative Elements --- */
 .codeSnippet {
   position: absolute;
   top: 15%;
@@ -59,11 +56,44 @@
   line-height: 1.2;
 }
 
-/* .brackets { ... } */
-/* .dotGrid { ... } */
-/* .curvedLine { ... } */
+.socialContainer {
+  position: fixed;
+  left: 40px;
+  top: 50%;
+  transform: translateY(50%);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  z-index: 10;
+}
 
-/* --- Responsive Styles --- */
+.socialContainer::before {
+  content: '';
+  width: 2px;
+  height: 250px;
+  background-color: #30363d;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.socialContainer a {
+  color: #8b949e;
+  font-size: 1.8rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  background-color: #0D1117;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.socialContainer a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
 @media (max-width: 1024px) {
   .heroContainer {
     padding: 0 40px;
@@ -114,7 +144,6 @@
     margin-bottom: 20px;
     padding: 0;
     border: none;
-    border-radius: 0;
     background-color: transparent;
     z-index: 5;
   }
@@ -125,10 +154,10 @@
   }
 
   .name {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     margin: -10px 0 0 0;
     color: #fff;
-    white-space: nowrap; /* Ensure "I'm Sathasivam R S" stays in a single line */
+    white-space: nowrap;
   }
 
   .profileImage {
@@ -146,7 +175,23 @@
     display: none;
   }
 
-  /* .brackets { display: none; } */
-  /* .dotGrid { display: none; } */
-  /* .curvedLine { display: none; } */
+  .socialContainer {
+    position: relative;
+    left: 0;
+    top: auto;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .socialContainer::before {
+    display: none;
+  }
+
+  .socialContainer a {
+    font-size: 1.5rem;
+    padding: 6px;
+  }
 }

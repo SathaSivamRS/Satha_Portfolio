@@ -2,6 +2,9 @@ import React from 'react';
 import styles from './Hero.module.css';
 import profilePic from '../../assets/SS_Transperent_2.png'; // Your transparent profile image
 
+// Example social icons (replace with your preferred icons or use react-icons)
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+
 const Hero = () => {
   const codeSnippet = `
   item {
@@ -30,6 +33,19 @@ const Hero = () => {
         alt="Sathasivam R S"
         className={styles.profileImage}
       />
+
+      {/* Social Icons */}
+      <div className={styles.socialContainer}>
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+          <FaGithub />
+        </a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin />
+        </a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+          <FaTwitter />
+        </a>
+      </div>
 
       <div className={styles.codeSnippet}>
         <pre><code>{codeSnippet}</code></pre>
