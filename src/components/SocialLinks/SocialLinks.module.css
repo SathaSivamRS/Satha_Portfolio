@@ -1,21 +1,22 @@
 .socialContainer {
   position: fixed;
-  left: 30px;
+  /* CHANGED: Positioned 40px from the left edge */
+  left: 40px; 
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(50%);
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 30px; /* Increased gap for better spacing */
   align-items: center;
   z-index: 10;
 }
 
-/* Vertical line */
+/* ADDED: This pseudo-element creates the vertical line */
 .socialContainer::before {
   content: '';
   width: 2px;
-  height: 250px; /* Adjust height as needed */
-  background-color: #30363d;
+  height: 250px;
+  background-color: #30363d; /* Subtle grey color for the line */
   position: absolute;
   left: 50%;
   top: 50%;
@@ -24,12 +25,16 @@
 }
 
 .socialContainer a {
+  /* CHANGED: Updated color to match the design's subtle grey */
   color: #8b949e;
-  font-size: 1.5rem;
+  /* CHANGED: Increased icon size */ 
+  font-size: 1.8rem;
   transition: color 0.3s ease, transform 0.3s ease;
-  background-color: #0D1117; /* To make icons pop out from the line */
-  padding: 5px; /* Adjust padding if needed */
-  border-radius: 5px; /* Subtle rounded corners */
+  
+  /* IMPORTANT: This makes the icon 'punch out' of the line */
+  background-color: #0D1117; 
+  padding: 8px;
+  border-radius: 50%; /* Make the background circular */
 }
 
 .socialContainer a:hover {
