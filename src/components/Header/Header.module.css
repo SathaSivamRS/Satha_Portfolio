@@ -5,7 +5,8 @@
   padding: 20px 80px;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 1000;
+  /* background-color: #0D1117; */
 }
 
 .logo {
@@ -14,10 +15,21 @@
   font-weight: 400;
   color: #fff;
   text-decoration: none;
+  transition: transform 0.3s ease;
 }
 
 .logo:hover{
-  font-size: 3.1rem;
+  transform: scale(1.05);
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1002;
 }
 
 .nav ul {
@@ -26,10 +38,10 @@
   gap: 30px;
   margin: 0;
   padding: 15px 30px;
-  background-color: rgba(43, 42, 42, 0.5); /* Semi-transparent background */
-  border-radius: 20px;
-  border: 1px solid #30363d;
-  backdrop-filter: blur(20px); /* This creates the frosted glass effect */
+  background-color: rgba(59, 41, 41, 0.5); 
+  border-radius: 30px;
+  border: 1px solid #3b2929;
+  backdrop-filter: blur(10px);
 }
 
 .nav a {
@@ -38,7 +50,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   padding: 10px 15px;
-  border-radius: 15px;
+  border-radius: 20px;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -48,40 +60,44 @@
 }
 
 .nav a.active {
-  background-color: #3b3b3b;
+  background-color: #3b2929;
   color: #fff;
 }
 
-/* --- Media Queries for Responsiveness --- */
-
-/* For Tablets */
 @media (max-width: 992px) {
   .header {
     padding: 20px 40px;
+    position: sticky;
   }
-}
-
-/* For Mobile Phones */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column; /* Stack logo and nav vertically */
-    gap: 20px;
-    padding: 20px;
+  
+  .hamburger {
+    display: block;
   }
 
-  .logo {
-    font-size: 2.5rem;
+  .nav {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    background-color: #161b22;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  .navOpen {
+    max-height: 500px;
   }
 
   .nav ul {
-    gap: 10px;
-    padding: 10px 15px;
-    flex-wrap: wrap; /* Allow nav items to wrap onto the next line */
-    justify-content: center;
-  }
-
-  .nav a {
-    font-size: 0.9rem;
-    padding: 8px 12px;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 0;
+    border-radius: 0;
+    border: none;
+    background: none;
+    backdrop-filter: none;
+    align-items: center;
+    gap: 15px;
   }
 }
