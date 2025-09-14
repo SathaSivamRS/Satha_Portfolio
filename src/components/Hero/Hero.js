@@ -18,7 +18,9 @@ const Hero = () => {
       {/* Decorative Elements */}
       <div className={styles.dotGrid}></div>
       
-      <img 
+      <img
+        draggable={false}
+        onDragStart={(e) => e.preventDefault()}
         src={profilePic} 
         alt="Sathasivam R S" 
         className={styles.profileImage} 
