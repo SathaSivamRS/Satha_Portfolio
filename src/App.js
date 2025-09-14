@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import SocialLinks from './components/SocialLinks/SocialLinks';
 import Hero from './components/Hero/Hero';
+import About from './components/About/About';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <SocialLinks />
       <Hero />
+      <About/>
     </div>
   );
 }

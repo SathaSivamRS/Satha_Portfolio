@@ -1,0 +1,68 @@
+.aboutSection {
+  padding: 80px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-family: 'Finger Paint', cursive;
+  font-size: 3.5rem;
+  color: #fff;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.avatarColumn {
+  flex: 1;
+  max-width: 400px;
+}
+
+.avatar {
+  width: 100%;
+  height: auto;
+  /* ADD THIS LINE to apply the animation */
+  animation: floatAnimation 3s ease-in-out infinite;
+}
+
+.textColumn {
+  flex: 2;
+  max-width: 700px;
+}
+
+.text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #c9d1d9;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.text:last-child {
+  margin-bottom: 0;
+}
+
+/* ADD THIS ENTIRE BLOCK to define the animation */
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Moves the image up */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

@@ -4,10 +4,12 @@ import styles from './Header.module.css';
 const Header = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>SS</div>
+      {/* Changed the div to an anchor tag to make the logo clickable */}
+      <a href="#" className={styles.logo}>SS</a>
+      
       <nav className={styles.nav}>
         <ul>
-          <li><a href="#home" className={styles.active}>Home</a></li>
+          <li><a href="#">Home</a></li>
           <li><a href="#about">About Me</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#projects">Projects</a></li>

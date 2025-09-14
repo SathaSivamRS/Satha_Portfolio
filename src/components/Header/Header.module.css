@@ -5,6 +5,11 @@
   padding: 20px 80px;
   position: relative;
   z-index: 10;
+  /* --- ADD THESE LINES --- */
+  position: sticky;
+  top: 0;
+  /* background-color: #0D1117; Matches the page background */
+  /* ----------------------- */
 }
 
 .logo {
@@ -12,6 +17,11 @@
   font-size: 3rem;
   font-weight: 400;
   color: #fff;
+  text-decoration: none;
+}
+
+.logo:hover{
+  font-size: 3.1rem;
 }
 
 .nav ul {
