@@ -35,7 +35,7 @@ const Hero = () => {
         <pre><code>{codeSnippet}</code></pre>
       </div>
 
-      {/* Optional decorations */}
+      {/* Optional decorative elements */}
       {/* <div className={styles.brackets}>{"{ }"}</div> */}
       {/* <div className={styles.curvedLine}></div> */}
     </main>
