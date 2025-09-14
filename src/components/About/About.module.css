@@ -32,7 +32,6 @@
 .avatar {
   width: 100%;
   height: auto;
-  /* ADD THIS LINE to apply the animation */
   animation: floatAnimation 3s ease-in-out infinite;
 }
 
@@ -54,15 +53,58 @@
   margin-bottom: 0;
 }
 
-/* ADD THIS ENTIRE BLOCK to define the animation */
 @keyframes floatAnimation {
   0% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px); /* Moves the image up */
+    transform: translateY(-10px);
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+/* Responsive: Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  .contentWrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .avatarColumn {
+    max-width: 300px;
+  }
+
+  .textColumn {
+    max-width: 90%;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive: Mobile (≤768px) */
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 40px 20px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+
+  .avatarColumn {
+    max-width: 250px;
+  }
+
+  .textColumn {
+    max-width: 100%;
+  }
+
+  .text {
+    font-size: 0.95rem;
   }
 }
