@@ -35,7 +35,7 @@
   color: #fff;
 }
 
-/* --- Profile Image (replaces the circle) --- */
+/* --- Profile Image --- */
 .profileImage {
   position: absolute;
   width: 300px;
@@ -46,8 +46,6 @@
   right: 10%;
   transform: translateY(-50%);
   z-index: 1;
-  /* Since your image is transparent, a border might not be needed. */
-  /* You can uncomment the line below if you want a border */
   /* border: 5px solid #30363d; */
 }
 
@@ -96,3 +94,96 @@
   border-color: transparent transparent #30363d #30363d;
   transform: rotate(-45deg);
 } */
+
+/* --- Responsive Styles --- */
+@media (max-width: 1024px) {
+  .heroContainer {
+    padding: 0 40px;
+  }
+
+  .textContent {
+    left: 10%;
+    top: 35%;
+  }
+
+  .greeting {
+    font-size: 3rem;
+  }
+
+  .name {
+    font-size: 3rem;
+    margin: -15px 0 0 0;
+  }
+
+  .profileImage {
+    width: 200px;
+    height: 200px;
+    top: 35%;
+    right: 5%;
+  }
+
+  .codeSnippet {
+    top: 10%;
+    left: 5%;
+    font-size: 0.8rem;
+  }
+
+  /* Optional: Hide decorative elements on tablet */
+  /* .brackets { display: none; } */
+  /* .dotGrid { display: none; } */
+  /* .curvedLine { display: none; } */
+}
+
+@media (max-width: 768px) {
+  .heroContainer {
+    padding: 0 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profileImage {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    top: auto;
+    right: auto;
+    transform: none;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .textContent {
+    position: relative;
+    left: 0;
+    top: auto;
+    transform: none;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 5;
+  }
+
+  .greeting {
+    font-size: 2.5rem;
+    color: #fff;
+  }
+
+  .name {
+    font-size: 2.5rem;
+    margin: -10px 0 0 0;
+    color: #fff;
+  }
+
+  .codeSnippet {
+    display: none; /* Hide code snippet on small screens */
+  }
+
+  /* Optional: Hide decorative elements on small tablets */
+  /* .brackets { display: none; } */
+  /* .dotGrid { display: none; } */
+  /* .curvedLine { display: none; } */
+}
