@@ -43,7 +43,7 @@
   border-radius: 50%;
   object-fit: cover;
   top: 40%;
-  right: 20%;
+  right: 10%;
   transform: translateY(-50%);
   z-index: 1;
   /* Since your image is transparent, a border might not be needed. */

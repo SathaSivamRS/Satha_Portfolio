@@ -3,13 +3,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 80px;
-  position: relative;
-  z-index: 10;
-  /* --- ADD THESE LINES --- */
   position: sticky;
   top: 0;
-  /* background-color: #0D1117; Matches the page background */
-  /* ----------------------- */
+  z-index: 10;
 }
 
 .logo {
@@ -47,11 +43,45 @@
 }
 
 .nav a:hover {
-  background-color: #3b3b3b;
-  color: #fff;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .nav a.active {
   background-color: #3b3b3b;
   color: #fff;
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* For Tablets */
+@media (max-width: 992px) {
+  .header {
+    padding: 20px 40px;
+  }
+}
+
+/* For Mobile Phones */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack logo and nav vertically */
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .logo {
+    font-size: 2.5rem;
+  }
+
+  .nav ul {
+    gap: 10px;
+    padding: 10px 15px;
+    flex-wrap: wrap; /* Allow nav items to wrap onto the next line */
+    justify-content: center;
+  }
+
+  .nav a {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
 }
