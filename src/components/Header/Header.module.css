@@ -21,9 +21,9 @@
   margin: 0;
   padding: 15px 30px;
   background-color: rgba(43, 42, 42, 0.5); /* Semi-transparent background */
-  border-radius: 30px;
+  border-radius: 20px;
   border: 1px solid #30363d;
-  backdrop-filter: blur(10px); /* This creates the frosted glass effect */
+  backdrop-filter: blur(20px); /* This creates the frosted glass effect */
 }
 
 .nav a {
@@ -32,7 +32,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   padding: 10px 15px;
-  border-radius: 20px;
+  border-radius: 15px;
   transition: background-color 0.3s, color 0.3s;
 }
 

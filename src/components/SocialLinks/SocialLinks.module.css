@@ -10,6 +10,7 @@
   z-index: 10;
 }
 
+/* Vertical line */
 .socialContainer::before {
   content: '';
   width: 2px;
@@ -26,6 +27,9 @@
   color: #8b949e;
   font-size: 1.5rem;
   transition: color 0.3s ease, transform 0.3s ease;
+  background-color: #0D1117; /* To make icons pop out from the line */
+  padding: 5px; /* Adjust padding if needed */
+  border-radius: 5px; /* Subtle rounded corners */
 }
 
 .socialContainer a:hover {

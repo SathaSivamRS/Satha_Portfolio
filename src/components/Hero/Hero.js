@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Hero.module.css';
-import profilePic from '../../assets/SS_Transperent.png'; // Using your new image file
+import profilePic from '../../assets/SS_Transperent_2.png'; // Using your new image file
 
 const Hero = () => {
   const codeSnippet = `
