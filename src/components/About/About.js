@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './About.module.css';
-import avatar from '../../assets/SS_Ghibli-Tb.png'; // Importing your avatar image
+import avatar from '../../assets/SS_Ghibli-Tb-1.png'; // Importing your avatar image
 
 
 const About = () => {
@@ -26,8 +26,7 @@ const About = () => {
                         core Java and web development principles.
                     </p>
                     <p className={styles.text}>
-                        I'm also fascinated by the intersection of AI and security,
-                        and I'm currently developing an AI-powered Cognitive
+                        I'm currently developing an AI-powered Cognitive
                         Protection App using Flutter and Firebase to explore mobile
                         security enhancements. Outside of the tech world, I practice
                         karate and have a creative side for mime - a bit of a
