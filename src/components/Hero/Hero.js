@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Hero.module.css';
-import profilePic from '../../assets/SS_Transperent_2.png'; // Using your new image file
+import profilePic from '../../assets/SS_Transperent_2.png'; // Your transparent profile image
 
 const Hero = () => {
   const codeSnippet = `
@@ -17,26 +17,27 @@ const Hero = () => {
     <main className={styles.heroContainer}>
       {/* Decorative Elements */}
       <div className={styles.dotGrid}></div>
-      
-      <img
-        draggable={false}
-        onDragStart={(e) => e.preventDefault()}
-        src={profilePic} 
-        alt="Sathasivam R S" 
-        className={styles.profileImage} 
-      />
-      
-      <div className={styles.codeSnippet}>
-        <pre><code>{codeSnippet}</code></pre>
-      </div>
-      {/* <div className={styles.brackets}>{"{ }"}</div> */}
-      <div className={styles.curvedLine}></div>
 
-      {/* Main Content */}
       <div className={styles.textContent}>
         <h1 className={styles.greeting}>Hi,</h1>
         <h2 className={styles.name}>I'm Sathasivam R S</h2>
       </div>
+
+      <img
+        draggable={false}
+        onDragStart={(e) => e.preventDefault()}
+        src={profilePic}
+        alt="Sathasivam R S"
+        className={styles.profileImage}
+      />
+
+      <div className={styles.codeSnippet}>
+        <pre><code>{codeSnippet}</code></pre>
+      </div>
+
+      {/* Optional decorations */}
+      {/* <div className={styles.brackets}>{"{ }"}</div> */}
+      {/* <div className={styles.curvedLine}></div> */}
     </main>
   );
 };

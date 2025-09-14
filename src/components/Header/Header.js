@@ -35,7 +35,7 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <a href="#home" className={styles.logo}>SS</a>
+      <a href="#" className={styles.logo}>SS</a>
       
       <button className={styles.hamburger} onClick={toggleNav} aria-label="Toggle navigation">
         <FiMenu />
@@ -43,7 +43,7 @@ const Header = () => {
 
       <nav className={`${styles.nav} ${isNavOpen ? styles.navOpen : ''}`}>
         <ul>
-          <li><a href="#home" className={activeLink === 'home' ? styles.active : ''} onClick={() => setIsNavOpen(false)}>Home</a></li>
+          <li><a href="#" className={activeLink === 'home' ? styles.active : ''} onClick={() => setIsNavOpen(false)}>Home</a></li>
           <li><a href="#about" className={activeLink === 'about' ? styles.active : ''} onClick={() => setIsNavOpen(false)}>About Me</a></li>
           <li><a href="#education" className={activeLink === 'education' ? styles.active : ''} onClick={() => setIsNavOpen(false)}>Education</a></li>
           <li><a href="#projects" className={activeLink === 'projects' ? styles.active : ''} onClick={() => setIsNavOpen(false)}>Projects</a></li>
