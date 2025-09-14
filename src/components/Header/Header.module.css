@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  font-family: 'Ga Maamli', sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 15px 30px;
+  background-color: rgba(43, 42, 42, 0.5); /* Semi-transparent background */
+  border-radius: 30px;
+  border: 1px solid #30363d;
+  backdrop-filter: blur(10px); /* This creates the frosted glass effect */
+}
+
+.nav a {
+  text-decoration: none;
+  color: #c9d1d9;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav a:hover {
+  background-color: #3b3b3b;
+  color: #fff;
+}
+
+.nav a.active {
+  background-color: #3b3b3b;
+  color: #fff;
+}

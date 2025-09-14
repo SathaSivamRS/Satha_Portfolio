@@ -1,0 +1,98 @@
+.heroContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 100px);
+  padding: 0 80px;
+  background-image: url('../../assets/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* --- Main Content --- */
+.textContent {
+  text-align: left;
+  z-index: 5;
+  position: absolute;
+  left: 20%;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.greeting {
+  font-family: 'Finger Paint', cursive;
+  font-size: 6rem;
+  margin: 0;
+  color: #fff;
+}
+
+.name {
+  font-family: 'Finger Paint', cursive;
+  font-size: 6rem;
+  margin: -20px 0 0 0;
+  color: #fff;
+}
+
+/* --- Profile Image (replaces the circle) --- */
+.profileImage {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  top: 40%;
+  right: 25%;
+  transform: translateY(-50%);
+  z-index: 1;
+  /* Since your image is transparent, a border might not be needed. */
+  /* You can uncomment the line below if you want a border */
+  /* border: 5px solid #30363d; */
+}
+
+/* --- Other Decorative Elements --- */
+.codeSnippet {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  color: #30363d;
+  font-size: 0.9rem;
+  opacity: 0.5;
+  line-height: 1.2;
+}
+
+.brackets {
+  position: absolute;
+  top: 45%;
+  right: 20%;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 8rem;
+  color: #161b22;
+  z-index: 2;
+  transform: translateY(-50%) rotate(15deg);
+}
+
+.dotGrid {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 150px;
+  background-image: radial-gradient(#30363d 2px, transparent 0);
+  background-size: 20px 20px;
+  opacity: 0.3;
+}
+
+.curvedLine {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: -10%;
+  right: 10%;
+  border-radius: 50%;
+  border: 2px solid #30363d;
+  border-color: transparent transparent #30363d #30363d;
+  transform: rotate(-45deg);
+}
