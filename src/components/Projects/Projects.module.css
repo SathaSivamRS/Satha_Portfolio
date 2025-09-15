@@ -24,6 +24,7 @@
   flex-wrap: wrap;
   width: 100%;
   max-width: 1200px;
+  overflow: visible; /* Ensure shadows are visible */
 }
 
 .projectCard {
@@ -38,7 +39,17 @@
   min-width: 300px;
   max-width: 500px;
   width: 100%;
-  box-sizing: border-box; /* Ensure proper sizing */
+  box-sizing: border-box;
+  position: relative;
+
+  /* Hover transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  background-color: rgba(59, 41, 41, 0.7); /* Slightly darker on hover */
 }
 
 .cardTitle {
@@ -84,7 +95,7 @@
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   background-color: rgba(217, 217, 217, 0.8);
   color: #161b22;
 }
@@ -95,9 +106,13 @@
 
 .button:hover {
   background-color: #fff;
+  transform: translateY(-3px); /* subtle lift on hover */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* Tablet and Mobile Responsiveness */
+/* ----------------- Responsive ----------------- */
+
+/* Medium screens (tablets) */
 @media (max-width: 992px) {
   .projectsSection {
     padding: 60px 20px;
@@ -116,14 +131,9 @@
     width: 100%;
     padding: 20px;
   }
-  
-  .projectCard:hover {
-  transform: translateY(-10px); /* Lift effect */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
 }
 
-}
-
+/* Small screens (phones) */
 @media (max-width: 480px) {
   .projectsSection {
     padding: 40px 10px;
