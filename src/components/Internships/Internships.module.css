@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .title {
@@ -38,6 +38,8 @@
   min-width: 280px;
   max-width: 400px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -89,25 +91,34 @@
     align-items: center;
     gap: 30px;
   }
+
+  .internshipCard {
+    max-width: 100%;
+    min-width: auto;
+    padding: 20px;
+    text-align: center;
+  }
 }
 
 /* Small screens (phones) */
 @media (max-width: 600px) {
+  .internshipsSection {
+    padding: 40px 10px;
+  }
+
   .title {
     font-size: 2rem;
+    margin-bottom: 40px;
   }
 
   .cardContainer {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    gap: 20px;
   }
 
   .internshipCard {
-    padding: 20px;
+    padding: 15px;
     min-width: 90%;
     max-width: 90%;
-    text-align: center; /* Center text for better mobile appearance */
   }
 
   .cardTitle {
@@ -115,7 +126,7 @@
   }
 
   .cardDescription {
-    font-size: 1.0rem;
+    font-size: 0.95rem;
     text-align: justify;
   }
 }
