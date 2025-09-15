@@ -7,6 +7,9 @@
   justify-content: center;
   position: relative;
   background-image: url('../../assets/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .title {
@@ -64,4 +67,53 @@
   max-width: 300px;
   width: 100%;
   height: auto;
+}
+
+/* Responsive for Tablets (≤1024px) */
+@media (max-width: 1024px) {
+  .contentWrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .detailsColumn {
+    align-items: center;
+    text-align: center;
+  }
+
+  .institution {
+    font-size: 1.3rem;
+  }
+
+  .details {
+    font-size: 1rem;
+  }
+
+  .educationImage {
+    max-width: 250px;
+  }
+}
+
+/* Responsive for Mobile (≤768px) */
+@media (max-width: 768px) {
+  .educationSection {
+    padding: 40px 20px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+
+  .institution {
+    font-size: 1.2rem;
+  }
+
+  .details {
+    font-size: 0.95rem;
+  }
+
+  .educationImage {
+    max-width: 200px;
+  }
 }

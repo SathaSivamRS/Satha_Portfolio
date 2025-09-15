@@ -5,6 +5,8 @@ import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import Education from './components/Education/Education';
+import Internships from './components/Internships/Internships';
+import Projects from './components/Projects/Projects';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Hero />
       <About/>
       <Education />
+      <Internships />
+      <Projects />
     </div>
   );
 }

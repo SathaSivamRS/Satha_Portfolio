@@ -1,0 +1,121 @@
+.internshipsSection {
+  padding: 100px 80px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  font-family: 'Finger Paint', cursive;
+  font-size: 3.5rem;
+  color: #fff;
+  margin-bottom: 70px;
+  text-align: center;
+  z-index: 1;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1400px;
+  z-index: 1;
+}
+
+.internshipCard {
+  background-color: rgba(59, 41, 41, 0.5);
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #3b2929;
+  backdrop-filter: blur(10px);
+  flex: 1 1 300px;
+  min-width: 280px;
+  max-width: 400px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.internshipCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.cardTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 10px 0;
+}
+
+.cardTitle span {
+  font-weight: 400;
+}
+
+.cardDetails {
+  font-size: 0.9rem;
+  color: #c9d1d9;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #3b2929;
+  padding-bottom: 15px;
+}
+
+.cardDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #c9d1d9;
+  text-align: justify;
+}
+
+/* --- Media Queries --- */
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+  .internshipsSection {
+    padding: 60px 20px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .cardContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .cardContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .internshipCard {
+    padding: 20px;
+    min-width: 90%;
+    max-width: 90%;
+    text-align: center; /* Center text for better mobile appearance */
+  }
+
+  .cardTitle {
+    font-size: 1.2rem;
+  }
+
+  .cardDescription {
+    font-size: 1.0rem;
+    text-align: justify;
+  }
+}

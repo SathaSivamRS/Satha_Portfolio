@@ -41,11 +41,11 @@
 }
 
 .text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Fira Code', sans-serif;
   font-size: 1.1rem;
   line-height: 1.8;
   color: #c9d1d9;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: justify;
 }
 

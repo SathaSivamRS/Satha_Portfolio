@@ -12,7 +12,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'education', 'projects', 'skills', 'contact'];
+      const sections = ['home', 'about', 'education', 'internships', 'skills', 'contact'];
       const scrollPosition = window.scrollY + 150;
 
       for (const sectionId of sections) {
@@ -46,7 +46,7 @@ const Header = () => {
           <li><a href="#" className={activeLink === 'home' ? styles.active : ''} onClick={() => setIsNavOpen(false)}>Home</a></li>
           <li><a href="#about" className={activeLink === 'about' ? styles.active : ''} onClick={() => setIsNavOpen(false)}>About Me</a></li>
           <li><a href="#education" className={activeLink === 'education' ? styles.active : ''} onClick={() => setIsNavOpen(false)}>Education</a></li>
-          <li><a href="#projects" className={activeLink === 'projects' ? styles.active : ''} onClick={() => setIsNavOpen(false)}>Projects</a></li>
+          <li><a href="#internships" className={activeLink === 'internships' ? styles.active : ''} onClick={() => setIsNavOpen(false)}>Internships</a></li>
           <li><a href="#skills" className={activeLink === 'skills' ? styles.active : ''} onClick={() => setIsNavOpen(false)}>Skills</a></li>
           <li><a href="#contact" className={activeLink === 'contact' ? styles.active : ''} onClick={() => setIsNavOpen(false)}>Reach Out</a></li>
         </ul>

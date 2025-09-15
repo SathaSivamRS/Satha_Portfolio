@@ -58,7 +58,7 @@
 
 .socialContainer {
   position: fixed;
-  left: 40px;
+  left: 20px;
   top: 50%;
   transform: translateY(50%);
   display: flex;
