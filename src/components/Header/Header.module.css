@@ -1,12 +1,13 @@
-/* Final Header CSS */
-
 .header {
+  /* CHANGED: Re-enabled flexbox layout and sticky positioning */
   display: flex;
-  justify-content: flex-end; /* Pushes nav to the right */
+  justify-content: space-between;
   align-items: center;
   padding: 20px 80px;
+  /* position: sticky; */
   top: 0;
   z-index: 1000;
+  background-color: #0D1117; /* Solid background is needed for a sticky header */
 }
 
 .logo {
@@ -16,12 +17,7 @@
   color: #fff;
   text-decoration: none;
   transition: transform 0.3s ease;
-  
-  /* --- Sticky behavior --- */
-  position: fixed;
-  top: 20px;
-  left: 80px;
-  z-index: 1001;
+  /* REMOVED: position: fixed and related properties */
 }
 
 .logo:hover {
@@ -70,45 +66,49 @@
   color: #fff;
 }
 
+
 /* --- Mobile and Tablet Styles --- */
 @media (max-width: 992px) {
   .header {
-    padding: 20px 25px;
+    padding: 20px 40px;
   }
   
-  .logo {
-    left: 25px; /* Adjust logo position for mobile padding */
-  }
-
   .hamburger {
     display: block;
   }
 
+  /* Hide the desktop nav */
   .nav {
     position: absolute;
-    top: 90px;
+    top: 90px; /* Adjust if header height changes */
     left: 0;
     width: 100%;
-    background-color: rgba(22, 27, 34, 0.85); 
-    backdrop-filter: blur(10px);
+    background-color: #161b22;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-in-out;
   }
 
+  /* This class is added by JS to show the menu */
   .navOpen {
-    max-height: 500px; /* Adjust this value to change the open menu's height */
+    max-height: 500px;
   }
 
   .nav ul {
     flex-direction: column;
     width: 100%;
-    padding: 30px 0;
+    padding: 20px 0;
     border-radius: 0;
     border: none;
     background: none;
-    backdrop-filter: blur(10px); 
+    backdrop-filter: none;
     align-items: center;
     gap: 15px;
   }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 25px;
+    }
 }
