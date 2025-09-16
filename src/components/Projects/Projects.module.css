@@ -7,6 +7,10 @@
   justify-content: center;
   position: relative;
   overflow-x: hidden; /* Prevent horizontal scroll */
+  background-image: url('../../assets/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .title {

@@ -1,0 +1,80 @@
+.skillsSection {
+  padding: 100px 80px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-family: 'Finger Paint', cursive;
+  font-size: 3.5rem;
+  color: #fff;
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+/* .title:hover{
+    text-decoration: underline;
+} */
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.skillCard {
+  background-color: rgba(59, 41, 41, 0.5);
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #3b2929;
+  backdrop-filter: blur(10px);
+  text-align: left;
+  /* CHANGED: Replaced animation properties with a simple transition */
+  transition: transform 0.3s ease;
+}
+
+/* ADDED: This block makes the card lift up on hover */
+.skillCard:hover {
+  transform: translateY(-10px);
+}
+
+.cardTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 15px 0;
+}
+
+.cardSkills {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #c9d1d9;
+  margin: 0;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 992px) {
+  .skillsSection {
+    padding: 60px 40px;
+  }
+  .skillsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .skillsSection {
+    padding: 60px 20px;
+  }
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+}
