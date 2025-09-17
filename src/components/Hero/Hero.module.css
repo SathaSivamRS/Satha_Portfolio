@@ -94,6 +94,26 @@
   transform: scale(1.2);
 }
 
+.resumeCard {
+  display: inline-block;
+  padding: 15px;
+  background-color: #161b22;
+  color: #c9d1d9;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 150px;
+  text-align: center;
+}
+
+.resumeCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(255, 255, 255, 0.1);
+}
+
+
 @media (max-width: 1024px) {
   .heroContainer {
     padding: 0 40px;

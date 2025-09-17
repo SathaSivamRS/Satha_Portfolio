@@ -36,7 +36,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <a href="#" className={styles.logo}>SS</a>
-      
+
       <button className={styles.hamburger} onClick={toggleNav} aria-label="Toggle navigation">
         <FiMenu />
       </button>
@@ -48,7 +48,15 @@ const Header = () => {
           <li><a href="#education" className={activeLink === 'education' ? styles.active : ''} onClick={() => setIsNavOpen(false)}>Education</a></li>
           <li><a href="#internships" className={activeLink === 'internships' ? styles.active : ''} onClick={() => setIsNavOpen(false)}>Internships</a></li>
           <li><a href="#skills" className={activeLink === 'skills' ? styles.active : ''} onClick={() => setIsNavOpen(false)}>Skills</a></li>
-          <li><a href="#contact" className={activeLink === 'contact' ? styles.active : ''} onClick={() => setIsNavOpen(false)}>Reach Out</a></li>
+          <li>
+            <a
+              href="mailto:sathasivamrs23@gmail.com"
+              className={activeLink === 'contact' ? styles.active : ''}
+              onClick={() => setIsNavOpen(false)}
+            >
+              Reach Out
+            </a>
+          </li>
         </ul>
       </nav>
     </header>

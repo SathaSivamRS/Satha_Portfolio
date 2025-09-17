@@ -24,6 +24,18 @@ const Hero = () => {
       <div className={styles.textContent}>
         <h1 className={styles.greeting}>Hi,</h1>
         <h2 className={styles.name}>I'm Sathasivam R S</h2>
+<h6>
+  <a
+    href="https://drive.google.com/file/d/1fYf6YBBxQ_kx3gWE3IvOb3dO8uQ-VsWz/view?usp=sharing"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={styles.resumeCard}
+  >
+    🌟 Check out my Resume
+  </a>
+</h6>
+
+
       </div>
 
       <img
