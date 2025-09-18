@@ -34,6 +34,7 @@
   border: 1px solid #3b2929;
   backdrop-filter: blur(10px);
   text-align: left;
+  
   /* CHANGED: Replaced animation properties with a simple transition */
   transition: transform 0.3s ease;
 }
@@ -41,6 +42,9 @@
 /* ADDED: This block makes the card lift up on hover */
 .skillCard:hover {
   transform: translateY(-10px);
+  background-color: rgba(59, 41, 41, 0.7); /* Slightly darker on hover */
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cardTitle {

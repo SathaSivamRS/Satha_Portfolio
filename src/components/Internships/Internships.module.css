@@ -45,7 +45,9 @@
 
 .internshipCard:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  background-color: rgba(59, 41, 41, 0.7); /* Slightly darker on hover */
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cardTitle {
