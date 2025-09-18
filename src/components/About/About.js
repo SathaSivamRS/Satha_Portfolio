@@ -26,9 +26,7 @@ const About = () => {
                         core Java and web development principles.
                     </p>
                     <p className={styles.text}>
-                        I'm currently developing an AI-powered Cognitive
-                        Protection App using Flutter and Firebase to explore mobile
-                        security enhancements. Outside of the tech world, I practice
+                        Outside of the tech world, I practice
                         karate and have a creative side for mime - a bit of a
                         contrast, right? This blend of creative discipline and
                         technical focus has driven me from my first internship to my
