@@ -10,8 +10,8 @@ const Education = () => {
         <div className={styles.detailsColumn}>
           <div className={styles.educationBlock}>
             <h3 className={styles.institution}>New Prince Matriculation Higher Secondary School, Chennai, TamilNadu</h3>
-            <p className={styles.details}>HSLC: 82.83% (497/600) – 2022</p>
-            <p className={styles.details}>SSLC: 78.60% (393/500) – 2020</p>
+            <p className={styles.details}>HSLC: 82.83% Marks - (497/600) Year – 2022</p>
+            <p className={styles.details}>SSLC: 78.60% Marks - (393/500) Year – 2020</p>
           </div>
           <div className={styles.educationBlock}>
             <h3 className={styles.institution}>Sri Sai Ram Institute of Technology, Chennai, TamilNadu</h3>
