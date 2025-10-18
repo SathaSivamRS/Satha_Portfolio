@@ -4,6 +4,12 @@ import styles from './Internships.module.css';
 // Storing internship data in an array makes the code cleaner
 const internshipsData = [
   {
+    company: "NLC India Private Limited",
+    role: "Web Developer",
+    details: "INTERN | 07 Jan 2025– 18 Jan 2025 | Neyveli | Offline",
+    description: "Developed a React-based IP management application for NLC with full CRUD functionality and device categorization for efficient tracking. Implemented regex-based validation to ensure accurate IP inputs and maintain data integrity."
+  },
+  {
     company: "GAOTek Inc.",
     role: "Wordpress WebDeveloper",
     details: "INTERN | 06/2024 – 11/2024 | New York, US | Online",
