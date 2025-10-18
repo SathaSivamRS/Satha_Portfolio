@@ -20,12 +20,6 @@ const internshipsData = [
     role: "Web Developer",
     details: "INTERN | 03/2024 – 05/2024 | India | Online",
     description: "Built a full-featured CRUD application using React.js, enabling users to create, read, update, and delete records seamlessly. Emphasized intuitive user experience and ensured data reliability through efficient state management and error handling."
-  },
-  {
-    company: "NLC India Private Limited",
-    role: "Web Developer",
-    details: "INTERN | 07 Jan 2025– 18 Jan 2025 | Neyveli | Offline",
-    description: "Developed a React-based IP management application for NLC with full CRUD functionality and device categorization for efficient tracking. Implemented regex-based validation to ensure accurate IP inputs and maintain data integrity."
   }
 ];
 
