@@ -18,7 +18,10 @@ const Header = () => {
       for (const sectionId of sections) {
         const section = document.getElementById(sectionId);
         if (section) {
-          if (section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
+          if (
+            section.offsetTop <= scrollPosition &&
+            section.offsetTop + section.offsetHeight > scrollPosition
+          ) {
             setActiveLink(sectionId);
             break;
           }
@@ -27,7 +30,6 @@ const Header = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -35,19 +37,71 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <a href="#" className={styles.logo}>SS</a>
+      {/* ✅ Use a button instead of an invalid link */}
+      <button
+        className={styles.logo}
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        aria-label="Scroll to top"
+      >
+        SS
+      </button>
 
-      <button className={styles.hamburger} onClick={toggleNav} aria-label="Toggle navigation">
+      <button
+        className={styles.hamburger}
+        onClick={toggleNav}
+        aria-label="Toggle navigation"
+      >
         <FiMenu />
       </button>
 
       <nav className={`${styles.nav} ${isNavOpen ? styles.navOpen : ''}`}>
         <ul>
-          <li><a href="#" className={activeLink === 'home' ? styles.active : ''} onClick={() => setIsNavOpen(false)}>Home</a></li>
-          <li><a href="#about" className={activeLink === 'about' ? styles.active : ''} onClick={() => setIsNavOpen(false)}>About Me</a></li>
-          <li><a href="#education" className={activeLink === 'education' ? styles.active : ''} onClick={() => setIsNavOpen(false)}>Education</a></li>
-          <li><a href="#internships" className={activeLink === 'internships' ? styles.active : ''} onClick={() => setIsNavOpen(false)}>Internships</a></li>
-          <li><a href="#skills" className={activeLink === 'skills' ? styles.active : ''} onClick={() => setIsNavOpen(false)}>Skills</a></li>
+          {/* ✅ Use #home for valid target */}
+          <li>
+            <a
+              href="#home"
+              className={activeLink === 'home' ? styles.active : ''}
+              onClick={() => setIsNavOpen(false)}
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="#about"
+              className={activeLink === 'about' ? styles.active : ''}
+              onClick={() => setIsNavOpen(false)}
+            >
+              About Me
+            </a>
+          </li>
+          <li>
+            <a
+              href="#education"
+              className={activeLink === 'education' ? styles.active : ''}
+              onClick={() => setIsNavOpen(false)}
+            >
+              Education
+            </a>
+          </li>
+          <li>
+            <a
+              href="#internships"
+              className={activeLink === 'internships' ? styles.active : ''}
+              onClick={() => setIsNavOpen(false)}
+            >
+              Internships
+            </a>
+          </li>
+          <li>
+            <a
+              href="#skills"
+              className={activeLink === 'skills' ? styles.active : ''}
+              onClick={() => setIsNavOpen(false)}
+            >
+              Skills
+            </a>
+          </li>
           <li>
             <a
               href="mailto:sathasivamrs23@gmail.com"

@@ -1,5 +1,4 @@
 .header {
-  /* CHANGED: Re-enabled flexbox layout and sticky positioning */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,8 +6,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  /* background-color: #0D1117; /* Solid background is needed for a sticky header */
-  
+  /* background-color: #0D1117;  Uncomment if you want a solid sticky header background */
 }
 
 .logo {
@@ -18,8 +16,11 @@
   color: #fff;
   text-decoration: none;
   transition: transform 0.3s ease;
-  /* REMOVED: position: fixed and related properties */
-  
+  background: none;            /* ✅ make button invisible */
+  border: none;                /* ✅ remove button border */
+  cursor: pointer;             /* ✅ pointer cursor like link */
+  padding: 0;                  /* ✅ reset button padding */
+  margin: 0;                   /* ✅ prevent shifting */
 }
 
 .logo:hover {
@@ -42,7 +43,7 @@
   gap: 30px;
   margin: 0;
   padding: 15px 30px;
-  background-color: rgba(59, 41, 41, 0.5); 
+  background-color: rgba(59, 41, 41, 0.5);
   border-radius: 30px;
   border: 1px solid #3b2929;
   backdrop-filter: blur(20px);
@@ -68,21 +69,19 @@
   color: #fff;
 }
 
-
 /* --- Mobile and Tablet Styles --- */
 @media (max-width: 992px) {
   .header {
     padding: 20px 40px;
   }
-  
+
   .hamburger {
     display: block;
   }
 
-  /* Hide the desktop nav */
   .nav {
     position: absolute;
-    top: 90px; /* Adjust if header height changes */
+    top: 90px;
     left: 0;
     width: 100%;
     background-color: #161b22;
@@ -91,7 +90,6 @@
     transition: max-height 0.4s ease-in-out;
   }
 
-  /* This class is added by JS to show the menu */
   .navOpen {
     max-height: 500px;
   }
@@ -110,7 +108,7 @@
 }
 
 @media (max-width: 768px) {
-    .header {
-        padding: 20px 25px;
-    }
+  .header {
+    padding: 20px 25px;
+  }
 }
