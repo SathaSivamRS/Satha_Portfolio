@@ -17,13 +17,7 @@ const About = () => {
                 </div>
                 <div className={styles.textColumn}>
                     <p className={styles.text}>
-                        I'm a final-year Computer Science student with a passion for
-                        building elegant, user-centric web applications. I specialize
-                        in the front-end, crafting experiences with ReactJS, and my
-                        skills in Figma and Canva allow me to believe the gap between
-                        creative vision and technical execution. I believe in being a
-                        lifelong learner, constantly strengthening my foundation in
-                        core Java and web development principles.
+                        I’m a final-year Computer Science student focused on UI/UX design and frontend development. I design user-friendly interfaces using Figma and Canva, and assist in implementing them with ReactJS and core Java fundamentals. I aim to create clean, intuitive, and technically feasible user experiences, while continuously strengthening my coding and problem-solving skills.
                     </p>
                     <p className={styles.text}>
                         Outside of the tech world, I practice
